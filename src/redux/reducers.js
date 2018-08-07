@@ -3,7 +3,7 @@ import {
   INVALID_SUBREDDIT,
   REQUEST_POSTS,
   RECEIVE_POSTS
-} from './constants'
+} from './constants';
 
 import { combineReducers } from 'redux';
 
@@ -68,6 +68,6 @@ const postsBySubreddit = (
 const rootReducer = combineReducers({
   postsBySubreddit,
   selectedSubreddit
-})
+});
 
-export default rootReducer
+export default rootReducer;

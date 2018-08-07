@@ -1,5 +1,5 @@
-import React from 'react'
-import { Menu, Icon } from 'semantic-ui-react'
+import React from 'react';
+import { Menu, Icon } from 'semantic-ui-react';
 
 const Navbar = ({ selectedSub, handleSubredditChange, handleRefreshSubreddit }) => (
   <div style={{ margin: '1rem' }}>
