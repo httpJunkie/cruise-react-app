@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesome';
+import FA from 'react-fontawesome';
 
 class Header extends Component {
   render() {
@@ -8,12 +8,12 @@ class Header extends Component {
         <div className="flex-item flex-container height-100">
           <div className="flex-item flex-container horiz-start vert-center">
             <div className="width-100">
-              <span className="title">PORTFOLIO</span>
+              <span className="title">CATS TOP 20</span>
             </div>
           </div>
           <div className="flex-item flex-container vert-center">
-            <div className="text-right width-100 horiz-end padding-right-1">
-              <FontAwesome name='twitter-square' />
+            <div className="text-right width-100 horiz-end">
+              <FA name='reddit-square'/>
             </div>
           </div>
         </div>

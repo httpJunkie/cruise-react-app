@@ -1,18 +1,25 @@
 {
-  "name": "ebishard",
-  "version": "0.1.0",
+  "name": "cruise-react-app",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "cross-fetch": "^2.2.2",
     "font-awesome": "^4.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-flexbox-grid": "^2.1.2",
     "react-fontawesome": "^1.6.1",
+    "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.4.2",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "remarkable": "^1.7.1",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.0"
   },
   "scripts": {
     "build:css": "postcss src/styles/app.css -o src/index.css",
