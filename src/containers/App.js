@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 import Header from '../components/Header';
 
@@ -8,15 +8,12 @@ import {
   selectSubreddit,
   fetchPostsIfNeeded,
   invalidSubreddit
-} from '../redux/actions'
-
-// import { BrowserRouter } from 'react-router';
-// import '../styles/app.css';
+} from '../redux/actions';
 
 // Import components
-import Navbar from '../components/Navbar'
-import Posts from './Posts'
-import { Dimmer, Loader } from 'semantic-ui-react'
+import Navbar from '../components/Navbar';
+import Posts from './Posts';
+import { Dimmer, Loader } from 'semantic-ui-react';
 
 class App extends Component {
   render() {
@@ -25,7 +22,9 @@ class App extends Component {
     return (
       <div id="app-root" className="flex-item yes-grow flex-container col">
         <Header />
-        <Dimmer blurring active={isFetching}><Loader>Loading</Loader></Dimmer>
+        <Dimmer blurring active={isFetching}>
+          <Loader>Loading</Loader>
+        </Dimmer>
         <Navbar
           selectedSub={selectedSubreddit}
           handleSubredditChange={this.handleSubredditChange}
