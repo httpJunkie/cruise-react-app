@@ -17,10 +17,13 @@ const activeSubredditLink = (state = 'cats', action) => {
   }
 }
 
-// Helper function for handling posts
-const posts = (
-  state = {isFetching: false, isInvalid: false, items: []}, action
-) => {
+const defaultValues = {
+  isFetching: false, 
+  isInvalid: false, 
+  items: []
+}
+
+const posts = (state = defaultValues, action = action) => {
   switch (action.type) {
     case INVALID_SUBREDDIT:
       return {
