@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
 
-const Post = ({ permalink, title, author }) => (
-  <Card href={'https://www.reddit.com/' + permalink} style={{ width: '100%' }}>
+const baseUrl = 'www.reddit.com';
+const Post = ({ permalink, title, author, id }) => (
+  <Card href={`https://${baseUrl}/${permalink}`} style={{ width: '100%' }}>
     <Card.Content>
-      <Card.Header>{title}</Card.Header>
+      <Card.Header name='{title}'>{id} - {title}</Card.Header>
       <Card.Meta>posted by: {author}</Card.Meta>
     </Card.Content>
   </Card>

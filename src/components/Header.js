@@ -8,7 +8,7 @@ class Header extends Component {
         <div className="flex-item flex-container height-100">
           <div className="flex-item flex-container horiz-start vert-center">
             <div className="width-100">
-              <span className="title">CATS TOP 20</span>
+              <span className="title">TOP 20 SUB-REDDIT</span>
             </div>
           </div>
           <div className="flex-item flex-container vert-center">

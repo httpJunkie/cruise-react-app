@@ -17,7 +17,7 @@ import { Dimmer, Loader } from 'semantic-ui-react';
 
 class App extends Component {
   render() {
-    const { selectedSubreddit, posts, isFetching } = this.props
+    const { activeSubredditLink, posts, isFetching } = this.props
 
     return (
       <div id="app-root" className="flex-item yes-grow flex-container col">
@@ -26,7 +26,7 @@ class App extends Component {
           <Loader>Loading</Loader>
         </Dimmer>
         <Navbar
-          selectedSub={selectedSubreddit}
+          selectedSub={activeSubredditLink}
           handleSubredditChange={this.handleSubredditChange}
           handleRefreshSubreddit={this.handleRefreshSubreddit}
         />
@@ -42,30 +42,30 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const { dispatch, selectedSubreddit } = this.props
-    dispatch(fetchPostsIfNeeded(selectedSubreddit))
+    const { dispatch, activeSubredditLink } = this.props;
+    dispatch(fetchPostsIfNeeded(activeSubredditLink));
   }
 
   handleSubredditChange(e, { name }) {
-    const sub = name.replace(/ /g, '')
-    this.props.dispatch(selectSubreddit(sub))
-    this.props.dispatch(fetchPostsIfNeeded(sub))
+    const sub = name.replace(/ /g, '');
+    this.props.dispatch(selectSubreddit(sub));
+    this.props.dispatch(fetchPostsIfNeeded(sub));
   }
 
   handleRefreshSubreddit() {
-    const { dispatch, selectedSubreddit } = this.props
-    dispatch(invalidSubreddit(selectedSubreddit))
-    dispatch(fetchPostsIfNeeded(selectedSubreddit))
+    const { dispatch, activeSubredditLink } = this.props
+    dispatch(invalidSubreddit(activeSubredditLink))
+    dispatch(fetchPostsIfNeeded(activeSubredditLink))
   }
 }
 
 function mapStateToProps(state) {
-  const { selectedSubreddit, postsBySubreddit } = state
+  const { activeSubredditLink, postsBySubreddit } = state
   const { isFetching, items: posts } = 
-    postsBySubreddit[selectedSubreddit] || { isFetching: true, items: [] }
+    postsBySubreddit[activeSubredditLink] || { isFetching: true, items: [] }
 
   return {
-    selectedSubreddit,
+    activeSubredditLink,
     posts,
     isFetching
   }

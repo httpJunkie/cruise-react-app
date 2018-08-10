@@ -8,7 +8,7 @@ import {
 import { combineReducers } from 'redux';
 
 // Reducer handling the currently selected subreddit
-const selectedSubreddit = (state = 'cats', action) => {
+const activeSubredditLink = (state = 'cats', action) => {
   switch (action.type) {
     case SELECT_SUBREDDIT:
       return action.subreddit
@@ -67,7 +67,7 @@ const postsBySubreddit = (
 // Combine reducers
 const rootReducer = combineReducers({
   postsBySubreddit,
-  selectedSubreddit
+  activeSubredditLink
 });
 
 export default rootReducer;
