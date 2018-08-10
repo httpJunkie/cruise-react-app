@@ -23,7 +23,7 @@ const initialValues = {
   items: []
 }
 
-const posts = (state = initialValues, action = action) => {
+const posts = (state = initialValues, action) => {
   switch (action.type) {
     case INVALID_SUBREDDIT:
       return {
